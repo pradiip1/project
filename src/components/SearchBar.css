@@ -1,0 +1,55 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+  border-radius: 1.5rem; /* rounded-3xl */
+  background-color: #ffffff;
+  padding: 0.75rem; /* p-3 */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); /* shadow-xl */
+}
+
+.search-bar-icon {
+  border-radius: 1rem; /* rounded-2xl */
+  background-color: #eff6ff; /* bg-blue-50 */
+  padding: 0.75rem; /* p-3 */
+  color: #2563eb; /* text-blue-600 */
+  display: flex;
+}
+
+.search-bar-input {
+  flex: 1 1 0%;
+  border: none;
+  background-color: transparent;
+  font-size: 1.125rem; /* text-lg */
+  outline: none;
+}
+
+.search-bar-filter {
+  border-radius: 1rem; /* rounded-2xl */
+  background-color: #f3f4f6; /* bg-gray-100 */
+  padding: 0.75rem; /* p-3 */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  transition: background-color 0.2s ease;
+}
+
+.search-bar-filter:hover {
+  background-color: #e5e7eb; /* hover:bg-gray-200 */
+}
+
+.search-bar-submit {
+  border-radius: 2.5rem; /* rounded-5xl (not a default Tailwind scale, treated as fully rounded pill) */
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.75rem 2rem; /* px-8 py-3 */
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.search-bar-submit:hover {
+  background-color: #1e40af; /* hover:bg-blue-800 */
+  transform: scale(1.1); /* hover:scale-110 */
+}

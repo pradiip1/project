@@ -1,4 +1,5 @@
 import { Search, SlidersHorizontal } from "lucide-react";
+import "./SearchBar.css";
 
 function SearchBar({ value, onChange, onSearch }) {
   const handleSubmit = (e) => {
@@ -7,41 +8,28 @@ function SearchBar({ value, onChange, onSearch }) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex items-center gap-4 rounded-3xl bg-white p-3 shadow-xl"
-    >
+    <form onSubmit={handleSubmit} className="search-bar">
       {/* Search Icon */}
-
-      <div className="rounded-2xl bg-blue-50 p-3 text-blue-600">
+      <div className="search-bar-icon">
         <Search size={22} />
       </div>
 
       {/* Input */}
-
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Search phones, laptops, headphones..."
-        className="flex-1 border-none bg-transparent text-lg outline-none"
+        className="search-bar-input"
       />
 
       {/* Filter */}
-
-      <button
-        type="button"
-        className="rounded-2xl bg-gray-100 p-3 transition hover:bg-gray-200"
-      >
+      <button type="button" className="search-bar-filter">
         <SlidersHorizontal size={20} />
       </button>
 
       {/* Search */}
-
-      <button
-        type="submit"
-        className="rounded-5xl bg-blue-600 px-8 py-3 font-semibold text-white transition hover:bg-blue-800 hover:scale-110"
-      >
+      <button type="submit" className="search-bar-submit">
         Search
       </button>
     </form>
