@@ -14,10 +14,7 @@ import "./Sidebar.css";
 function Sidebar({ open, onClose, user }) {
   const menus = [
     { name: "Dashboard", icon: <LayoutDashboard size={20} />, path: "/" },
-    { name: "Categories", icon: <Grid2X2 size={20} />, path: "/" },
-    { name: "Products", icon: <ShoppingBag size={20} />, path: "/" },
-    { name: "Compare", icon: <Scale size={20} />, path: "/" },
-    { name: "Wishlist", icon: <Heart size={20} />, path: "/" },
+    { name: "About", icon: <Heart size={20} />, path: "/" },
     { name: "Settings", icon: <Settings size={20} />, path: "/help" },
   ];
 
