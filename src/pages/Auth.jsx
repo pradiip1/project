@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AuthPage.css";
 
 function AuthPage({ user, onLogin, onSignUp }) {
   const navigate = useNavigate();
@@ -44,104 +45,105 @@ function AuthPage({ user, onLogin, onSignUp }) {
   };
 
   return (
-    <section className="mx-auto max-w-4xl px-6 py-12 md:px-8 lg:py-16">
-      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-900/5 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100">
-          <p className="text-sm uppercase tracking-[0.3em] text-orange-600">Account access</p>
-          <h1 className="mt-4 text-4xl font-bold text-slate-900 dark:text-white">{mode === "login" ? "Sign in to your account" : "Create your PriceNepal account"}</h1>
-          <p className="mt-4 text-slate-600 dark:text-slate-300">
+    <section className="auth-section">
+      <div className="auth-grid">
+        <div className="auth-card">
+          <p className="auth-eyebrow">Account access</p>
+          <h1 className="auth-title">
+            {mode === "login" ? "Sign in to your account" : "Create your PriceNepal account"}
+          </h1>
+          <p className="auth-description">
             {mode === "login"
               ? "Use the form to sign in with email and password. If you do not have an account, switch to Sign Up."
               : "Enter your details to create a new account. Once signed in, you can update your password and access settings."}
           </p>
 
-          <div className="mt-8 flex gap-3 rounded-full bg-slate-100 p-1 dark:bg-slate-800">
+          <div className="auth-mode-toggle">
             <button
               type="button"
               onClick={() => toggleMode("login")}
-              className={`flex-1 rounded-full px-4 py-3 text-sm font-semibold transition ${mode === "login" ? "bg-white text-slate-900 shadow-sm dark:bg-slate-900 dark:text-white" : "text-slate-500 hover:text-slate-700 dark:text-slate-400"}`}
+              className={`auth-mode-btn ${mode === "login" ? "auth-mode-btn--active" : ""}`}
             >
               Login
             </button>
             <button
               type="button"
               onClick={() => toggleMode("signup")}
-              className={`flex-1 rounded-full px-4 py-3 text-sm font-semibold transition ${mode === "signup" ? "bg-white text-slate-900 shadow-sm dark:bg-slate-900 dark:text-white" : "text-slate-500 hover:text-slate-700 dark:text-slate-400"}`}
+              className={`auth-mode-btn ${mode === "signup" ? "auth-mode-btn--active" : ""}`}
             >
               Sign Up
             </button>
           </div>
 
-          <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+          <form onSubmit={handleSubmit} className="auth-form">
             {mode === "signup" && (
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-200">
+              <label className="auth-field">
                 Name
                 <input
                   type="text"
                   value={name}
                   onChange={(event) => setName(event.target.value)}
-                  className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:focus:ring-orange-400/20"
+                  className="auth-input"
                   placeholder="Your name"
                 />
               </label>
             )}
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-200">
+            <label className="auth-field">
               Email
               <input
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:focus:ring-orange-400/20"
+                className="auth-input"
                 placeholder="name@example.com"
               />
             </label>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-200">
+            <label className="auth-field">
               Password
               <input
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
-                className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:focus:ring-orange-400/20"
+                className="auth-input"
                 placeholder="Enter your password"
               />
             </label>
             {mode === "signup" && (
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-200">
+              <label className="auth-field">
                 Confirm password
                 <input
                   type="password"
                   value={confirmPassword}
                   onChange={(event) => setConfirmPassword(event.target.value)}
-                  className="mt-3 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:focus:ring-orange-400/20"
+                  className="auth-input"
                   placeholder="Repeat your password"
                 />
               </label>
             )}
-            <button
-              type="submit"
-              className="w-full rounded-3xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200/40 transition hover:bg-orange-600"
-            >
+            <button type="submit" className="auth-submit">
               {mode === "login" ? "Sign in" : "Create account"}
             </button>
-            {message && <p className="text-sm text-orange-700 dark:text-orange-300">{message}</p>}
+            {message && <p className="auth-message">{message}</p>}
           </form>
         </div>
 
-        <div className="rounded-[2rem] bg-orange-50 p-8 shadow-xl shadow-orange-200/40 dark:bg-slate-900 dark:text-slate-100">
-          <h2 className="text-3xl font-semibold">Fast access</h2>
-          <p className="mt-4 text-slate-700 dark:text-slate-300">
+        <div className="auth-side-card">
+          <h2 className="auth-side-title">Fast access</h2>
+          <p className="auth-side-text">
             {user
               ? "You are already signed in. Use the top navigation to return home or open the settings panel to update your password."
               : "Enter your details to get started. After signing up, use the same email and password to log in."}
           </p>
-          <div className="mt-8 space-y-4 rounded-[2rem] bg-white p-5 dark:bg-slate-950">
+          <div className="auth-side-panel">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">Need help?</p>
-              <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Visit the Help page for tips on searching and comparing prices.</p>
+              <p className="auth-side-panel-label">Need help?</p>
+              <p className="auth-side-panel-text">
+                Visit the Help page for tips on searching and comparing prices.
+              </p>
             </div>
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">Contact</p>
-              <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">support@pricenepal.com</p>
+              <p className="auth-side-panel-label">Contact</p>
+              <p className="auth-side-panel-text">support@pricenepal.com</p>
             </div>
           </div>
         </div>
