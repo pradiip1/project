@@ -1,0 +1,189 @@
+.product-card {
+  overflow: hidden;
+  border-radius: 1.875rem; /* rounded-[30px] */
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-0.5rem); /* hover:-translate-y-2 */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* hover:shadow-2xl */
+}
+
+/* Image */
+
+.product-card-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card-image {
+  height: 18rem; /* h-72 */
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-card-image {
+  transform: scale(1.1); /* group-hover:scale-110 */
+}
+
+.product-card-badge {
+  position: absolute;
+  left: 1.25rem; /* left-5 */
+  top: 1.25rem; /* top-5 */
+  border-radius: 9999px;
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Body */
+
+.product-card-body {
+  padding: 1.5rem; /* p-6 */
+}
+
+.product-card-rating {
+  margin-bottom: 0.75rem; /* mb-3 */
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* gap-1 */
+}
+
+.product-card-rating-star {
+  fill: #facc15; /* fill-yellow-400 */
+  color: #facc15; /* text-yellow-400 */
+}
+
+.product-card-rating-count {
+  margin-left: 0.5rem; /* ml-2 */
+  font-size: 0.875rem;
+  color: #64748b; /* text-slate-500 */
+}
+
+.product-card-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700;
+}
+
+.product-card-subtitle {
+  margin-top: 0.75rem; /* mt-3 */
+  font-size: 0.875rem;
+  color: #64748b; /* text-slate-500 */
+}
+
+.product-card-price-row {
+  margin-top: 1.5rem; /* mt-6 */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.product-card-price {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  color: #2563eb; /* text-blue-600 */
+}
+
+.product-card-price-original {
+  font-size: 0.875rem;
+  color: #94a3b8; /* text-slate-400 */
+  text-decoration: line-through;
+}
+
+.product-card-deal-badge {
+  border-radius: 9999px;
+  background-color: #dcfce7; /* bg-green-100 */
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #15803d; /* text-green-700 */
+}
+
+.product-card-actions {
+  margin-top: 1.5rem; /* mt-6 */
+  display: flex;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.btn-outline {
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* gap-2 */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #e2e8f0;
+  background-color: transparent;
+  padding: 0.75rem 0; /* py-3 */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+
+.btn-filled {
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* gap-2 */
+  border-radius: 0.75rem; /* rounded-xl */
+  border: none;
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.75rem 0; /* py-3 */
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-filled:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* Price comparison list */
+
+.product-card-price-list {
+  margin-top: 1.5rem; /* mt-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* space-y-3 */
+}
+
+.product-card-price-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem; /* rounded-2xl */
+  background-color: #f1f5f9; /* bg-slate-100 */
+  padding: 1rem; /* p-4 */
+}
+
+.product-card-price-item-store {
+  font-weight: 600;
+}
+
+.product-card-price-item-price {
+  color: #2563eb; /* text-blue-600 */
+}
+
+.product-card-visit-link {
+  border-radius: 0.75rem; /* rounded-xl */
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.product-card-visit-link:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}

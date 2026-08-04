@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import { Star, ShoppingCart, Eye } from "lucide-react";
+import "./ProductCard.css";
 
 function ProductCard({ product }) {
   const [showPrices, setShowPrices] = useState(false);
@@ -11,133 +12,93 @@ function ProductCard({ product }) {
   const saving = highest - lowest;
 
   return (
-    <div className="group overflow-hidden rounded-[30px] bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-
+    <div className="product-card">
       {/* Image */}
-
-      <div className="relative overflow-hidden">
-
+      <div className="product-card-image-wrap">
         <img
           src={product.image}
           alt={product.name}
-          className="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
+          className="product-card-image"
         />
 
-        <span className="absolute left-5 top-5 rounded-full bg-blue-600 px-4 py-2 text-sm font-bold text-white">
+        <span className="product-card-badge">
           Save Rs {saving.toLocaleString()}
         </span>
-
-        
-
       </div>
 
       {/* Body */}
+      <div className="product-card-body">
+        <div className="product-card-rating">
+          <Star className="product-card-rating-star" size={18} />
+          <Star className="product-card-rating-star" size={18} />
+          <Star className="product-card-rating-star" size={18} />
+          <Star className="product-card-rating-star" size={18} />
+          <Star className="product-card-rating-star" size={18} />
 
-      <div className="p-6">
-
-        <div className="mb-3 flex items-center gap-1">
-
-          <Star className="fill-yellow-400 text-yellow-400" size={18} />
-          <Star className="fill-yellow-400 text-yellow-400" size={18} />
-          <Star className="fill-yellow-400 text-yellow-400" size={18} />
-          <Star className="fill-yellow-400 text-yellow-400" size={18} />
-          <Star className="fill-yellow-400 text-yellow-400" size={18} />
-
-          <span className="ml-2 text-sm text-slate-500">
-            (4.9)
-          </span>
-
+          <span className="product-card-rating-count">(4.9)</span>
         </div>
 
-        <h2 className="text-2xl font-bold">
-          {product.name}
-        </h2>
+        <h2 className="product-card-title">{product.name}</h2>
 
-        <p className="mt-3 text-sm text-slate-500">
+        <p className="product-card-subtitle">
           Compare prices from {product.options.length} stores
         </p>
 
-        <div className="mt-6 flex items-end justify-between">
-
+        <div className="product-card-price-row">
           <div>
-
-            <p className="text-3xl font-bold text-blue-600">
-              Rs {lowest.toLocaleString()}
-            </p>
-
-            <p className="text-sm text-slate-400 line-through">
+            <p className="product-card-price">Rs {lowest.toLocaleString()}</p>
+            <p className="product-card-price-original">
               Rs {highest.toLocaleString()}
             </p>
-
           </div>
 
-          <span className="rounded-full bg-green-100 px-3 py-2 text-sm font-semibold text-green-700">
-            Best Deal
-          </span>
-
+          <span className="product-card-deal-badge">Best Deal</span>
         </div>
 
-        <div className="mt-6 flex gap-3">
-
+        <div className="product-card-actions">
           <button
             onClick={() => setShowPrices(!showPrices)}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl border py-3 font-semibold transition hover:bg-gray-100"
+            className="btn-outline"
           >
             <Eye size={18} />
             Compare
           </button>
 
-          <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700">
+          <button className="btn-filled">
             <ShoppingCart size={18} />
             Buy
           </button>
-
         </div>
 
         {showPrices && (
-
-          <div className="mt-6 space-y-3">
-
+          <div className="product-card-price-list">
             {[...product.options]
               .sort((a, b) => a.price - b.price)
               .map((option) => (
-
-                <div
-                  key={option.store}
-                  className="flex items-center justify-between rounded-2xl bg-slate-100 p-4"
-                >
-
+                <div key={option.store} className="product-card-price-item">
                   <div>
-
-                    <h3 className="font-semibold">
+                    <h3 className="product-card-price-item-store">
                       {option.store}
                     </h3>
 
-                    <p className="text-blue-600">
+                    <p className="product-card-price-item-price">
                       Rs {option.price.toLocaleString()}
                     </p>
-
                   </div>
 
                   <a
                     href={option.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-xl bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+                    className="product-card-visit-link"
                   >
                     Visit
                   </a>
-
                 </div>
-
               ))}
-
           </div>
-
         )}
-
       </div>
-
     </div>
   );
 }
