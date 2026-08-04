@@ -182,3 +182,161 @@
     border-right-color: var(--border);
   }
 }
+.app-shell {
+  min-height: 100vh; /* min-h-screen */
+  background-color: #f1f5f9; /* bg-slate-100 */
+}
+
+.app-content {
+  min-height: 100vh; /* min-h-screen */
+}
+
+/* Header */
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 5rem; /* h-20 */
+  border-bottom: 1px solid #e5e7eb; /* border-b */
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+.app-header-inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem; /* px-8 */
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* gap-5 */
+}
+
+.app-menu-btn {
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem; /* p-3 */
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.app-menu-btn:hover {
+  background-color: #f1f5f9; /* hover:bg-slate-100 */
+}
+
+.app-brand-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  margin: 0;
+}
+
+.app-brand-accent {
+  color: #2563eb; /* text-blue-600 */
+}
+
+.app-brand-subtitle {
+  font-size: 0.75rem; /* text-xs */
+  color: #64748b; /* text-slate-500 */
+}
+
+/* Center search */
+
+.app-header-center {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .app-header-center {
+    display: flex; /* lg:flex */
+  }
+}
+
+.app-search-box {
+  display: flex;
+  width: 100%;
+  max-width: 36rem; /* max-w-xl */
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  background-color: #f1f5f9; /* bg-slate-100 */
+  padding: 0.75rem 1.25rem; /* px-5 py-3 */
+}
+
+.app-search-input {
+  flex: 1 1 0%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.app-search-btn {
+  border-radius: 9999px;
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.5rem 1.5rem; /* px-6 py-2 */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.app-search-btn:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* Right actions */
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.app-settings-btn {
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 1.25rem; /* px-5 py-2 */
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.app-settings-btn:hover {
+  background-color: #f1f5f9; /* hover:bg-slate-100 */
+}
+
+.app-logout-btn {
+  border-radius: 0.75rem; /* rounded-xl */
+  background-color: #ef4444; /* bg-red-500 */
+  padding: 0.5rem 1.25rem; /* px-5 py-2 */
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.app-logout-btn:hover {
+  background-color: #dc2626; /* hover:bg-red-600 */
+}
+
+.app-signin-link {
+  border-radius: 0.75rem; /* rounded-xl */
+  background-color: #2563eb; /* bg-blue-600 */
+  padding: 0.5rem 1.25rem; /* px-5 py-2 */
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.app-signin-link:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}

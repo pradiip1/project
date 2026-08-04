@@ -7,6 +7,7 @@ import AuthPage from "./pages/Auth";
 
 import Sidebar from "./components/Sidebar";
 import SettingsPanel from "./components/SettingsPanel";
+import "./App.css";
 
 function App() {
 
@@ -156,7 +157,7 @@ function App() {
 
     <BrowserRouter>
 
-      <div className="min-h-screen bg-slate-100">
+      <div className="app-shell">
 
         <Sidebar
           open={sidebarOpen}
@@ -175,31 +176,31 @@ function App() {
           onClearHistory={clearSearchHistory}
         />
 
-        <div className="min-h-screen">
+        <div className="app-content">
 
-          <header className="sticky top-0 z-30 h-20 border-b bg-white shadow-sm">
+          <header className="app-header">
 
-            <div className="flex h-full items-center justify-between px-8">
+            <div className="app-header-inner">
 
-              <div className="flex items-center gap-5">
+              <div className="app-header-left">
 
                 <button
                   onClick={() => setSidebarOpen(!sidebarOpen)}
-                  className="rounded-xl border p-3 hover:bg-slate-100"
+                  className="app-menu-btn"
                 >
                   ☰
                 </button>
 
                 <div>
 
-                  <h1 className="text-3xl font-bold">
+                  <h1 className="app-brand-title">
                     Price
-                    <span className="text-blue-600">
+                    <span className="app-brand-accent">
                       Nepal
                     </span>
                   </h1>
 
-                  <p className="text-xs text-slate-500">
+                  <p className="app-brand-subtitle">
                     Compare prices instantly
                   </p>
 
@@ -207,17 +208,17 @@ function App() {
 
               </div>              {/* Center Search */}
 
-              <div className="hidden lg:flex flex-1 justify-center">
+              <div className="app-header-center">
 
-                <div className="flex w-full max-w-xl items-center rounded-full border bg-slate-100 px-5 py-3">
+                <div className="app-search-box">
 
                   <input
                     type="text"
                     placeholder="Search products..."
-                    className="flex-1 bg-transparent outline-none"
+                    className="app-search-input"
                   />
 
-                  <button className="rounded-full bg-blue-600 px-6 py-2 text-white hover:bg-blue-700">
+                  <button className="app-search-btn">
                     Search
                   </button>
 
@@ -227,11 +228,11 @@ function App() {
 
               {/* Right */}
 
-              <div className="flex items-center gap-3">
+              <div className="app-header-right">
 
                 <button
                   onClick={() => setSettingsOpen(true)}
-                  className="rounded-xl border px-5 py-2 hover:bg-slate-100"
+                  className="app-settings-btn"
                 >
                   ⚙ Settings
                 </button>
@@ -240,7 +241,7 @@ function App() {
 
                   <button
                     onClick={handleLogout}
-                    className="rounded-xl bg-red-500 px-5 py-2 font-semibold text-white hover:bg-red-600"
+                    className="app-logout-btn"
                   >
                     Logout
                   </button>
@@ -249,7 +250,7 @@ function App() {
 
                   <NavLink
                     to="/auth"
-                    className="rounded-xl bg-blue-600 px-5 py-2 font-semibold text-white hover:bg-blue-700"
+                    className="app-signin-link"
                   >
                     Sign In
                   </NavLink>
