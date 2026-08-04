@@ -9,6 +9,7 @@ import {
   Menu,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import "./Sidebar.css";
 
 function Sidebar({ open, onClose, user }) {
   const menus = [
@@ -23,112 +24,66 @@ function Sidebar({ open, onClose, user }) {
   return (
     <>
       {/* Mobile Overlay */}
-
       <div
-        className={`fixed inset-0 z-40 bg-black/40 transition duration-300 ${
-          open ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
+        className={`sidebar-overlay ${open ? "sidebar-overlay--open" : ""}`}
         onClick={onClose}
       />
 
       {/* Sidebar */}
-
-      <aside
-        className={`fixed left-0 top-0 z-50 h-screen w-72 bg-white shadow-2xl transition-all duration-300
-        ${open ? "translate-x-0" : "-translate-x-full"}`}
-      >
+      <aside className={`sidebar ${open ? "sidebar--open" : ""}`}>
         {/* Header */}
-
-        <div className="flex items-center justify-between border-b p-6">
-
+        <div className="sidebar-header">
           <div>
-
-            <h1 className="text-3xl font-bold">
-              Price<span className="text-blue-600">Nepal</span>
+            <h1 className="sidebar-title">
+              Price<span className="sidebar-title-accent">Nepal</span>
             </h1>
-
-            <p className="text-sm text-gray-500">
-              Compare Prices
-            </p>
-
+            <p className="sidebar-subtitle">Compare Prices</p>
           </div>
 
-          <button
-            onClick={onClose}
-            className="rounded-lg p-2 hover:bg-gray-100"
-          >
+          <button onClick={onClose} className="sidebar-close-btn">
             <Menu />
           </button>
-
         </div>
 
         {/* User */}
-
-        <div className="m-5 rounded-3xl bg-blue-50 p-5">
-
-          <div className="flex items-center gap-4">
-
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-xl font-bold text-white">
+        <div className="sidebar-user-card">
+          <div className="sidebar-user-row">
+            <div className="sidebar-user-avatar">
               {user?.name?.charAt(0) || "G"}
             </div>
 
             <div>
-
-              <h3 className="font-bold">
-                {user?.name || "Guest"}
-              </h3>
-
-              <p className="text-sm text-gray-500">
+              <h3 className="sidebar-user-name">{user?.name || "Guest"}</h3>
+              <p className="sidebar-user-email">
                 {user?.email || "Not Logged In"}
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         {/* Menu */}
-
-        <div className="px-4">
-
+        <div className="sidebar-menu">
           {menus.map((item) => (
             <NavLink
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
-                `mb-2 flex items-center gap-4 rounded-2xl px-5 py-4 transition ${
-                  isActive
-                    ? "bg-blue-600 text-white"
-                    : "hover:bg-blue-50"
-                }`
+                `sidebar-menu-link ${isActive ? "sidebar-menu-link--active" : ""}`
               }
             >
               {item.icon}
-
-              <span className="font-medium">
-                {item.name}
-              </span>
-
+              <span className="sidebar-menu-link-label">{item.name}</span>
             </NavLink>
           ))}
-
         </div>
 
         {/* Footer */}
-
-        <div className="absolute bottom-8 left-0 w-full px-5">
-
-          <button className="flex w-full items-center justify-center gap-3 rounded-2xl bg-red-500 py-4 font-semibold text-white transition hover:bg-red-600">
-
+        <div className="sidebar-footer">
+          <button className="sidebar-logout-btn">
             <LogOut size={20} />
-
             Logout
-
           </button>
-
         </div>
-
       </aside>
     </>
   );
