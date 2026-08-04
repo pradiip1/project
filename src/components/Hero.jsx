@@ -6,7 +6,7 @@ function Hero() {
       <div className="hero-grid">
         {/* Left */}
         <div>
-          <span className="hero-badge">#1 Price Comparison Platform</span>
+          <span className="hero-badge">#2 Price Comparison Platform</span>
 
           <h1 className="hero-title">
             Compare Prices
