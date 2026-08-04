@@ -1,0 +1,112 @@
+.help-section {
+  max-width: 72rem; /* max-w-6xl */
+  margin: 0 auto;
+  padding: 3rem 1.5rem; /* py-12 px-6 */
+}
+
+@media (min-width: 768px) {
+  .help-section {
+    padding-left: 2rem; /* md:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .help-section {
+    padding-top: 4rem; /* lg:py-16 */
+    padding-bottom: 4rem;
+  }
+}
+
+.help-card {
+  border-radius: 2rem; /* rounded-[2rem] */
+  border: 1px solid #e2e8f0; /* border-slate-200 */
+  background-color: #ffffff;
+  padding: 2rem; /* p-8 */
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05); /* shadow-xl shadow-slate-900/5 */
+}
+
+.dark .help-card {
+  border-color: #334155; /* dark:border-slate-700 */
+  background-color: #020617; /* dark:bg-slate-950 */
+  color: #f1f5f9; /* dark:text-slate-100 */
+}
+
+.help-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  color: #0f172a; /* text-slate-900 */
+}
+
+.dark .help-title {
+  color: #ffffff; /* dark:text-white */
+}
+
+.help-intro {
+  margin-top: 1rem; /* mt-4 */
+  max-width: 48rem; /* max-w-3xl */
+  font-size: 1.125rem;
+  line-height: 2rem; /* leading-8 */
+  color: #475569; /* text-slate-600 */
+}
+
+.dark .help-intro {
+  color: #cbd5e1; /* dark:text-slate-300 */
+}
+
+.help-list {
+  margin-top: 2.5rem; /* mt-10 */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* space-y-8 */
+}
+
+.help-item-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  color: #0f172a; /* text-slate-900 */
+}
+
+.dark .help-item-title {
+  color: #ffffff; /* dark:text-white */
+}
+
+.help-item-text {
+  margin-top: 0.75rem; /* mt-3 */
+  color: #475569; /* text-slate-600 */
+}
+
+.dark .help-item-text {
+  color: #cbd5e1; /* dark:text-slate-300 */
+}
+
+.help-support-box {
+  border-radius: 2rem; /* rounded-[2rem] */
+  border: 1px dashed #cbd5e1; /* border-dashed border-slate-300 */
+  background-color: #f8fafc; /* bg-slate-50 */
+  padding: 1.5rem; /* p-6 */
+}
+
+.dark .help-support-box {
+  border-color: #334155; /* dark:border-slate-700 */
+  background-color: #0f172a; /* dark:bg-slate-900 */
+}
+
+.help-support-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600;
+  color: #0f172a; /* text-slate-900 */
+}
+
+.dark .help-support-title {
+  color: #ffffff; /* dark:text-white */
+}
+
+.help-support-text {
+  margin-top: 0.75rem; /* mt-3 */
+  color: #475569; /* text-slate-600 */
+}
+
+.dark .help-support-text {
+  color: #cbd5e1; /* dark:text-slate-300 */
+}
