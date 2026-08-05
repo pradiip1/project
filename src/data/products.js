@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: "Apple iPhone 16 128GB",
-    image: "https://via.placeholder.com/300x220?text=iPhone+16",
+    image: "src/assets/iPhone-16-Pro.jpg",
     options: [
       { store: "Daraz", price: 134999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 132500, link: "https://hukut.com/" },
@@ -13,7 +13,7 @@ const products = [
   {
     id: 2,
     name: "Samsung Galaxy S25 Ultra",
-    image: "https://via.placeholder.com/300x220?text=Galaxy+S25+Ultra",
+    image: "src/assets/sam.jpeg",
     options: [
       { store: "Daraz", price: 169999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 167500, link: "https://hukut.com/" },
@@ -24,7 +24,7 @@ const products = [
   {
     id: 3,
     name: "Google Pixel 9 Pro",
-    image: "https://via.placeholder.com/300x220?text=Pixel+9+Pro",
+    image: "src/assets/pixel.jpeg",
     options: [
       { store: "Daraz", price: 142999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 141500, link: "https://hukut.com/" },
@@ -35,7 +35,7 @@ const products = [
   {
     id: 4,
     name: "OnePlus 13",
-    image: "https://via.placeholder.com/300x220?text=OnePlus+13",
+    image: "src/assets/images.jpeg",
     options: [
       { store: "Daraz", price: 109999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 108500, link: "https://hukut.com/" },
@@ -46,7 +46,7 @@ const products = [
   {
     id: 5,
     name: "Xiaomi 15 Ultra",
-    image: "https://via.placeholder.com/300x220?text=Xiaomi+15+Ultra",
+    image: "src/assets/xiomi.jpeg",
     options: [
       { store: "Daraz", price: 119999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 118000, link: "https://hukut.com/" },
@@ -57,7 +57,7 @@ const products = [
   {
     id: 6,
     name: "MacBook Air M4",
-    image: "https://via.placeholder.com/300x220?text=MacBook+Air+M4",
+    image: "src/assets/macbook.jpeg",
     options: [
       { store: "Daraz", price: 189999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 186999, link: "https://hukut.com/" },
@@ -68,7 +68,7 @@ const products = [
   {
     id: 7,
     name: "Dell XPS 15",
-    image: "https://via.placeholder.com/300x220?text=Dell+XPS+15",
+    image: "src/assets/xp.jpeg",
     options: [
       { store: "Daraz", price: 225000, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 223000, link: "https://hukut.com/" },
@@ -79,7 +79,7 @@ const products = [
   {
     id: 8,
     name: "HP Spectre x360",
-    image: "https://via.placeholder.com/300x220?text=HP+Spectre",
+    image: "src/assets/images (1).jpeg",
     options: [
       { store: "Daraz", price: 199999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 197500, link: "https://hukut.com/" },
@@ -90,7 +90,7 @@ const products = [
   {
     id: 9,
     name: "ASUS ROG Zephyrus G16",
-    image: "https://via.placeholder.com/300x220?text=ROG+G16",
+    image: "src/assets/asus.jpeg",
     options: [
       { store: "Daraz", price: 269999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 266500, link: "https://hukut.com/" },
@@ -101,7 +101,7 @@ const products = [
   {
     id: 10,
     name: "Lenovo Legion Pro 7",
-    image: "https://via.placeholder.com/300x220?text=Legion+Pro+7",
+    image: "src/assets/lenevo.jpeg",
     options: [
       { store: "Daraz", price: 259999, link: "https://www.daraz.com.np/" },
       { store: "Hukut", price: 257500, link: "https://hukut.com/" },
@@ -111,7 +111,7 @@ const products = [
 {
   id: 11,
   name: "Acer Predator Helios Neo 16",
-  image: "https://via.placeholder.com/300x220?text=Predator+Neo+16",
+  image: "src/assets/acer.jpeg",
   options: [
     { store: "Daraz", price: 229999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 227500, link: "https://hukut.com/" },
@@ -121,7 +121,7 @@ const products = [
 {
   id: 12,
   name: "Apple AirPods Pro 2",
-  image: "https://via.placeholder.com/300x220?text=AirPods+Pro+2",
+  image: "src/assets/aplle .jpeg",
   options: [
     { store: "Daraz", price: 36999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 35999, link: "https://hukut.com/" },
@@ -311,7 +311,7 @@ const products = [
 {
   id: 31,
   name: "Apple iPhone 16 256GB",
-  image: "https://via.placeholder.com/300x220?text=iPhone+16+256GB",
+  image: "src/assets/iPhone-16-Pro.jpg",
   options: [
     { store: "Daraz", price: 149999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 148000, link: "https://hukut.com/" },
@@ -321,7 +321,7 @@ const products = [
 {
   id: 32,
   name: "Apple iPhone 16 Plus 128GB",
-  image: "https://via.placeholder.com/300x220?text=iPhone+16+Plus",
+  image: "src/assets/iphon2.jpeg",
   options: [
     { store: "Daraz", price: 159999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 158000, link: "https://hukut.com/" },
@@ -331,7 +331,7 @@ const products = [
 {
   id: 33,
   name: "Apple iPhone 16 Plus 256GB",
-  image: "https://via.placeholder.com/300x220?text=iPhone+16+Plus+256GB",
+  image: "src/assets/iphon2.jpeg",
   options: [
     { store: "Daraz", price: 169999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 168500, link: "https://hukut.com/" },
@@ -341,7 +341,7 @@ const products = [
 {
   id: 34,
   name: "Apple iPhone 16 Pro 128GB",
-  image: "https://via.placeholder.com/300x220?text=iPhone+16+Pro",
+  image: "src/assets/iphon2.jpeg",
   options: [
     { store: "Daraz", price: 189999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 188000, link: "https://hukut.com/" },
@@ -351,7 +351,7 @@ const products = [
 {
   id: 35,
   name: "Apple iPhone 16 Pro 256GB",
-  image: "https://via.placeholder.com/300x220?text=iPhone+16+Pro+256GB",
+  image: "src/assets/iphon2.jpeg",
   options: [
     { store: "Daraz", price: 204999, link: "https://www.daraz.com.np/" },
     { store: "Hukut", price: 202999, link: "https://hukut.com/" },

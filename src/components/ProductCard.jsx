@@ -19,6 +19,10 @@ function ProductCard({ product }) {
           src={product.image}
           alt={product.name}
           className="product-card-image"
+          onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "https://placehold.co/300x300?text=No+Image";
+    }}
         />
 
         <span className="product-card-badge">
