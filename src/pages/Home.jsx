@@ -14,9 +14,12 @@ const categories = [
 ];
 
 function Home({ onSearchUsed }) {
-  const [search, setSearch] = useState("");
-  const [store, setStore] = useState("All");
-  const [sort, setSort] = useState("");
+ const [search, setSearch] = useState("");
+const [store, setStore] = useState("All");
+const [sort, setSort] = useState("");
+
+const [currentPage, setCurrentPage] = useState(1);
+const productsPerPage = 12;
 
   const filteredProducts = useMemo(() => {
     const result = products.filter((product) => {
