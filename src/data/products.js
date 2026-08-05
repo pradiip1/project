@@ -4,9 +4,9 @@ const products = [
     name: "Apple iPhone 16 128GB",
     image: "src/assets/iPhone-16-Pro.jpg",
     options: [
-      { store: "Daraz", price: 134999, link: "https://www.daraz.com.np/" },
-      { store: "Hukut", price: 132500, link: "https://hukut.com/" },
-      { store: "BrotherMart", price: 135900, link: "https://brother-mart.com/products/iphone-16-price-in-nepal" }
+      { store: "Daraz", price: 150999, link: "https://www.daraz.com.np/" },
+      { store: "Hukut", price: 146599, link: "https://hukut.com/iphone-16" },
+      { store: "BrotherMart", price: 160900, link: "https://brother-mart.com/products/iphone-16-price-in-nepal" }
     ]
   },
 
